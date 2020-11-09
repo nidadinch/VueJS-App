@@ -1,3 +1,5 @@
+
+
 import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
 
 import Dashboard from "@/pages/Dashboard.vue";
@@ -7,6 +9,7 @@ import Icons from "@/pages/Icons.vue";
 import Maps from "@/pages/Maps.vue";
 import Notifications from "@/pages/Notifications.vue";
 import Profil from "../pages/Profil";
+import Home from "../pages/Home";
 
 const routes = [
   {

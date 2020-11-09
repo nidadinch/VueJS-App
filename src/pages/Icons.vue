@@ -1,41 +1,57 @@
 <template>
-  <div class="content">
-    <div class="md-layout">
-      <div class="md-layout-item">
-        <md-card class="md-card-plain">
-          <md-card-header data-background-color="green">
-            <h4 class="title">Material Design Icons</h4>
-            <p class="category">
-              Handcrafted by our friends from
-              <a target="_blank" href="https://design.google.com/icons/"
-                >Google</a
-              >
-            </p>
-          </md-card-header>
+  <div>
+    <md-table  table-header-color="tableHeaderColor">
+      <md-table-row slot="md-table-row" v-for="item in list" v-bind:key="item.name" >
+        <md-table-cell style="white-space: nowrap;" md-label="Sensör">{{ item.time }}</md-table-cell>
+        <md-table-cell  md-label="Ölçüm">{{ item.t }}</md-table-cell>
+        <md-table-cell style="white-space: nowrap;" md-label="Ölçüm Aralığı">{{ item.h }}</md-table-cell>
+        <md-table-cell style="white-space: nowrap;" md-label="Alarm - Sıcaklık">{{item.co2}}</md-table-cell>
+        <md-table-cell style="white-space: nowrap;" md-label="Alarm - Nem">{{ item.alarm2 }}</md-table-cell>
+        <md-table-cell style="white-space: nowrap;" md-label="Batarya">{{ item.battery }}</md-table-cell>
+        <md-table-cell style="white-space: nowrap;" md-label="Çekim Gücü">{{ item.cekim }}</md-table-cell>
+        <md-table-cell style="white-space: nowrap;" md-label="Grafik">{{ item.graph }}</md-table-cell>
+      </md-table-row>
+    </md-table>
 
-          <md-card-content>
-            <div class="iframe-container hidden-sm">
-              <iframe src="https://vuematerial.io/components/icon">
-                <p>Your browser does not support iframes.</p>
-              </iframe>
-            </div>
-            <div class="hidden-md">
-              <h5>
-                The icons are visible on Desktop mode inside an iframe. Since
-                the iframe is not working on Mobile and Tablets please visit the
-                icons on their original page on Google. Check the
-                <a href="https://design.google.com/icons/" target="_blank"
-                  >Material Icons</a
-                >
-              </h5>
-            </div>
-          </md-card-content>
-        </md-card>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-export default {};
+import Vue from 'vue';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+Vue.use(VueAxios,axios);
+
+
+export default {
+    props: {
+      tableHeaderColor: {
+        type: String,
+        default: ""
+      }
+    },
+
+  name: "sensors",
+  data() {
+    return {list:undefined}
+  },
+  mounted() {
+    var config = {
+      method: 'post',
+      url: 'http://localhost:3000/acs/updatedData',
+      data: "{\"currData\":1,\"alarms\":1}",
+    };
+    axios(config)
+      .then((response)=>
+      {
+        this.list = response.data.currData;
+        console.warn(response.data.currData);
+      })
+  }
+}
+
 </script>
+
+<style>
+
+</style>

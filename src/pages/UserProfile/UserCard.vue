@@ -8,7 +8,7 @@
     <md-card-content>
 
       <h6 class="category text-gray">Dost Tarım</h6>
-      <h4 class="card-title">Alec Thompson</h4>
+      <h4 class="card-title">Erol Dost</h4>
       <p class="card-description"></p>
     </md-card-content>
   </md-card>

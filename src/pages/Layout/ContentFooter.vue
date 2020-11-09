@@ -4,7 +4,7 @@
       <nav>
         <ul>
           <li>
-            <a href="http://www.acsteknoloji.com.tr">Lorem Ipsum</a>
+            <a href="http://www.acsteknoloji.com.tr">ACS TEKNOLOJI</a>
           </li>
        <!--   <li>
             <a href="https://creative-tim.com/presentation">

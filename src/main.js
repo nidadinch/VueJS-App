@@ -1,12 +1,13 @@
-
 import Vue from "vue";
 import VueRouter from "vue-router";
 import App from "./App";
 import axios from "axios";
-
-axios.defaults.baseURL = "https://aranet-acs.firebaseio.com/"
+import VueAxios from "vue-axios";
+Vue.use(VueAxios,axios);
 // router setup
 import routes from "./routes/routes";
+import "bulma/css/bulma.css";
+
 
 // Plugins
 import GlobalComponents from "./globalComponents";

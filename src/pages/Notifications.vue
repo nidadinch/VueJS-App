@@ -2,7 +2,7 @@
   <div class="content">
     <div class="md-layout">
       <div class="md-layout-item">
-        <div>
+      <!--  <div>
           <md-tabs md-sync-route>
             <md-tab id="tab-home" md-label="Home" to="/components/tabs" exact>
               Home Tab
@@ -24,7 +24,7 @@
             </md-tab>
           </md-tabs>
         </div>
- <!--       <md-card>
+        <md-card>
           <md-card-header data-background-color="green">
             <h4 class="title">Notifications</h4>
             <p class="category">

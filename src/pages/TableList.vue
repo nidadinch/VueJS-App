@@ -6,15 +6,15 @@
       >
         <md-card>
           <md-card-header data-background-color="green">
-            <h4 class="title">Simple Table</h4>
-            <p class="category">Here is a subtitle for this table</p>
+            <h3 class="title">Sensörler  </h3>
+            <p class="category">...</p>
           </md-card-header>
           <md-card-content>
             <simple-table table-header-color="green"></simple-table>
           </md-card-content>
         </md-card>
       </div>
-
+<!--
       <div
         class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-100"
       >
@@ -27,7 +27,7 @@
             <ordered-table></ordered-table>
           </md-card-content>
         </md-card>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -37,7 +37,7 @@ import { SimpleTable, OrderedTable } from "@/components";
 
 export default {
   components: {
-    OrderedTable,
+   // OrderedTable,
     SimpleTable
   }
 };
