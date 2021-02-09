@@ -8,10 +8,9 @@
 * Node.js
 * Express.js
 
-[![Home Page](https://github.com/nidadinch/VueJS-App/blob/master/Homepage.png)](https://github.com/nidadinch/VueJS-App/blob/master/Homepage.png)
-[![Home Page](https://i.imgur.com/W9zBrZ3.png)](https://i.imgur.com/W9zBrZ3.png)
 
-   
+[![Home Page](https://github.com/nidadinch/VueJS-App/blob/master/Homepage.png)](https://github.com/nidadinch/VueJS-App/blob/master/Homepage.png)
+
    
 ## Contributing
 
